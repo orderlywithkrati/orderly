@@ -53,30 +53,30 @@
     /* [2] Announcement — black background */
     .announcement { background: var(--black); color: var(--white); text-align: center; padding: 0.6rem 1rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
-    /* [2][3] Header — black theme, centred logo, split nav */
-    .site-header { position: sticky; top: 0; z-index: 100; background: var(--black); border-bottom: 1px solid rgba(255,255,255,0.08); transition: box-shadow 0.3s ease; }
-    .site-header.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.6); }
+    /* Header — white, centred logo, split nav spread to edges */
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid rgba(8,8,8,0.08); transition: box-shadow 0.3s ease; }
+    .site-header.scrolled { box-shadow: 0 2px 20px rgba(8,8,8,0.07); }
     .header-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 1rem 3rem; max-width: var(--max-width); margin: 0 auto; position: relative; }
 
-    .nav-left  { display: flex; justify-content: flex-end;   }
-    .nav-right { display: flex; justify-content: flex-start; align-items: center; }
+    .nav-left  { display: flex; justify-content: flex-start; }
+    .nav-right { display: flex; justify-content: flex-end; align-items: center; }
     .nav-left ul, .nav-right ul { display: flex; gap: 2.5rem; align-items: center; }
 
-    .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.78); position: relative; padding-bottom: 2px; }
-    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--white); transition: width 0.3s ease; }
-    .nav-links a:hover { color: var(--white); }
+    .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(8,8,8,0.72); position: relative; padding-bottom: 2px; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--black); transition: width 0.3s ease; }
+    .nav-links a:hover { color: var(--black); }
     .nav-links a:hover::after { width: 100%; }
 
     .logo-center { display: flex; justify-content: center; padding: 0 4rem; }
-    .logo-center img { height: 88px; width: auto; filter: brightness(0) invert(1); }
+    .logo-center img { height: 88px; width: auto; }
 
-    /* [2] "Contact Us" CTA — white pill on black header */
-    .nav-cta { background: var(--white) !important; color: var(--black) !important; border-color: var(--white) !important; padding: 0.55rem 1.4rem !important; border-radius: var(--radius-btn) !important; border: 1px solid !important; font-size: 0.78rem !important; letter-spacing: 0.1em !important; font-weight: 500 !important; text-transform: uppercase !important; }
-    .nav-cta:hover { background: transparent !important; color: var(--white) !important; }
+    /* "Get Orderly" CTA — black pill on white header */
+    .nav-cta { background: var(--black) !important; color: var(--white) !important; border-color: var(--black) !important; padding: 0.55rem 1.4rem !important; border-radius: var(--radius-btn) !important; border: 1px solid !important; font-size: 0.78rem !important; letter-spacing: 0.1em !important; font-weight: 500 !important; text-transform: uppercase !important; }
+    .nav-cta:hover { background: transparent !important; color: var(--black) !important; }
     .nav-cta::after { display: none !important; }
 
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); }
-    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--white); transition: var(--transition); }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); transition: var(--transition); }
 
     /* [2] Mobile nav — black */
     .mobile-nav { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
@@ -252,7 +252,7 @@
     <nav class="nav-right">
       <ul class="nav-links">
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        <li><a href="#contact" class="nav-cta">Get Orderly</a></li>
       </ul>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
