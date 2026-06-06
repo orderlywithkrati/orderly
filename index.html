@@ -135,9 +135,13 @@
     .process-title { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; margin-bottom: 0.7rem; }
     .process-desc { font-size: 0.87rem; color: #555; line-height: 1.7; }
 
-    /* [5] Gallery — filters removed, grid only */
+    /* Gallery */
     .gallery-section { padding: 80px 0; background: var(--white); content-visibility: auto; contain-intrinsic-size: 0 800px; }
+    .gallery-filters { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .filter-btn { padding: 0.5rem 1.4rem; border-radius: var(--radius-btn); border: 1px solid rgba(8,8,8,0.2); background: transparent; font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; color: var(--black); font-weight: 400; }
+    .filter-btn:hover, .filter-btn.active { background: var(--black); color: var(--white); border-color: var(--black); }
     .gallery-grid { columns: 3; column-gap: 1rem; max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
+    .gallery-item[data-cat].hidden { display: none; }
     .gallery-item { break-inside: avoid; margin-bottom: 1rem; overflow: hidden; border-radius: 2px; cursor: pointer; position: relative; }
     .gallery-item img { width: 100%; display: block; transition: transform 0.5s ease; }
     .gallery-item:hover img { transform: scale(1.04); }
@@ -411,30 +415,37 @@
 </section>
 
 <!-- ═══ GALLERY ═══ -->
-<!-- [5] Filter buttons (All / Closet / Kitchen / Vanity) removed — showing all work directly -->
 <section class="gallery-section" id="gallery">
   <div class="container">
     <h2 class="section-title reveal">Our Work</h2>
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="closet">Wardrobe</button>
+      <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+      <button class="filter-btn" data-filter="vanity">Vanity</button>
+    </div>
   </div>
   <div class="gallery-grid" id="gallery-grid">
-    <div class="gallery-item"><img src="images/closet/closet-1.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-2.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-3.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-4.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-5.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-6.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-7.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-8.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-9.jpg"   alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/closet/closet-10.jpg"  alt="Closet organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/kitchen/kitchen-1.jpg" alt="Kitchen makeover"    loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/kitchen/kitchen-2.jpg" alt="Kitchen makeover"    loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/kitchen/kitchen-3.jpg" alt="Kitchen makeover"    loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/kitchen/kitchen-4.jpg" alt="Kitchen makeover"    loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/vanity/vanity-1.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/vanity/vanity-2.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/vanity/vanity-3.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item"><img src="images/vanity/vanity-4.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <!-- Wardrobe / Closet -->
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-1.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-2.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-3.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-4.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-5.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-6.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-7.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-8.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-9.jpg"   alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="closet"><img src="images/closet/closet-10.jpg"  alt="Wardrobe organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <!-- Kitchen -->
+    <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-1.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-2.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-3.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-4.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <!-- Vanity -->
+    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-1.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-2.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-3.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-4.jpg"   alt="Vanity organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
   </div>
 </section>
 
@@ -618,14 +629,33 @@
     setTimeout(() => { btn.textContent = 'Message Sent ✓'; btn.style.background = '#2a2a2a'; this.reset(); }, 1500);
   });
 
-  // Lightbox — [5] no filter logic needed since filters are removed
+  // Gallery filter — no "All", default to Wardrobe
+  const filterBtns   = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  function applyFilter(f) {
+    galleryItems.forEach(item => item.classList.toggle('hidden', item.dataset.cat !== f));
+  }
+
+  // Show Wardrobe on load
+  applyFilter('closet');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+
+  // Lightbox
   let lbImages = [];
   let lbIndex  = 0;
   const lightbox = document.getElementById('lightbox');
   const lbImg    = document.getElementById('lb-img');
 
   function openLightbox(index) {
-    lbImages = Array.from(document.querySelectorAll('.gallery-item img'));
+    lbImages = Array.from(document.querySelectorAll('.gallery-item:not(.hidden) img'));
     lbIndex  = index;
     lbImg.src = lbImages[lbIndex].src;
     lightbox.classList.add('open');
