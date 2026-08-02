@@ -502,7 +502,7 @@
     <h2 class="contact-heading reveal">Ready to get Orderly?</h2>
     <!-- [7] Removed "within 24 hours" -->
     <p class="contact-sub reveal">Tell us about your space and we'll be in touch soon.</p>
-    <form class="contact-form reveal" id="contact-form">
+    <form class="contact-form reveal" id="contact-form" data-endpoint="https://formspree.io/f/mykrrgzo">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name</label>
@@ -643,9 +643,27 @@
   // Contact form
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const btn = this.querySelector('[type="submit"]');
+    const form = this;
+    const btn = form.querySelector('[type="submit"]');
+    const originalBg = btn.style.background;
     btn.textContent = 'Sending…'; btn.disabled = true;
-    setTimeout(() => { btn.textContent = 'Message Sent ✓'; btn.style.background = '#2a2a2a'; this.reset(); }, 1500);
+
+    fetch(form.dataset.endpoint, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('Submission failed');
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = '#2a2a2a';
+        form.reset();
+      })
+      .catch(() => {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+        btn.style.background = originalBg;
+      });
   });
 
   // Gallery filter — no "All", default to Wardrobe
