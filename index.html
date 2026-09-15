@@ -109,7 +109,7 @@
     .services-section { padding: 80px 0; background: var(--grey-light); }
     .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; text-align: center; margin-bottom: 3rem; letter-spacing: 0.02em; }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
-    .service-card { background: var(--white); border-radius: 2px; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease; cursor: pointer; }
+    .service-card { display: block; background: var(--white); border-radius: 2px; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease; cursor: pointer; color: inherit; text-decoration: none; }
     .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(8,8,8,0.1); }
     .service-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.6s ease; }
     .service-card:hover img { transform: scale(1.04); }
@@ -324,54 +324,54 @@
     <h2 class="section-title reveal">Services</h2>
   </div>
   <div class="services-grid container">
-    <div class="service-card reveal reveal-delay-1">
+    <a href="house-move-setup.html" class="service-card reveal reveal-delay-1">
       <img src="images/closet/closet-8.jpg" alt="House Move & Setup" loading="lazy" decoding="async" />
       <div class="service-body">
         <h3 class="service-name">House Move &amp; Setup</h3>
         <p class="service-desc">Start your new chapter with a beautifully organised home from day one.</p>
-        <a href="house-move-setup.html" class="service-link">Learn More →</a>
+        <span class="service-link">Learn More →</span>
       </div>
-    </div>
-    <div class="service-card reveal reveal-delay-2">
+    </a>
+    <a href="closet-organisation.html" class="service-card reveal reveal-delay-2">
       <img src="images/closet/closet-1.jpg" alt="Closet Organisation" loading="lazy" decoding="async" />
       <div class="service-body">
         <h3 class="service-name">Closet Organisation</h3>
         <p class="service-desc">A wardrobe where everything has its place, get dressed with ease every morning.</p>
-        <a href="closet-organisation.html" class="service-link">Learn More →</a>
+        <span class="service-link">Learn More →</span>
       </div>
-    </div>
-    <div class="service-card reveal reveal-delay-3">
+    </a>
+    <a href="kitchen-makeover.html" class="service-card reveal reveal-delay-3">
       <img src="images/kitchen/kitchen-1.jpg" alt="Kitchen Makeover" loading="lazy" decoding="async" />
       <div class="service-body">
         <h3 class="service-name">Kitchen Makeover</h3>
         <p class="service-desc">A functional, beautiful kitchen that makes cooking a pleasure, not a chore.</p>
-        <a href="kitchen-makeover.html" class="service-link">Learn More →</a>
+        <span class="service-link">Learn More →</span>
       </div>
-    </div>
-    <div class="service-card reveal reveal-delay-1">
+    </a>
+    <a href="office-decluttering.html" class="service-card reveal reveal-delay-1">
       <img src="images/vanity/vanity-5.jpg" alt="Office Decluttering" loading="lazy" decoding="async" />
       <div class="service-body">
         <h3 class="service-name">Office Decluttering</h3>
         <p class="service-desc">A clear desk, a clear mind, optimise your workspace for focus and productivity.</p>
-        <a href="office-decluttering.html" class="service-link">Learn More →</a>
+        <span class="service-link">Learn More →</span>
       </div>
-    </div>
-    <div class="service-card reveal reveal-delay-2">
+    </a>
+    <a href="pre-move-decluttering.html" class="service-card reveal reveal-delay-2">
       <img src="images/vanity/vanity-7.jpg" alt="Pre-Move Decluttering" loading="lazy" decoding="async" />
       <div class="service-body">
         <h3 class="service-name">Pre-Move Decluttering</h3>
         <p class="service-desc">Move only what you love, let go of the rest and start fresh.</p>
-        <a href="pre-move-decluttering.html" class="service-link">Learn More →</a>
+        <span class="service-link">Learn More →</span>
       </div>
-    </div>
-    <div class="service-card reveal reveal-delay-3">
+    </a>
+    <a href="online-consultation.html" class="service-card reveal reveal-delay-3">
       <img src="images/kitchen/kitchen-8.jpg" alt="Online Consultation" loading="lazy" decoding="async" />
       <div class="service-body">
         <h3 class="service-name">Online Consultation</h3>
         <p class="service-desc">Expert guidance from anywhere in India, transform your space virtually.</p>
-        <a href="online-consultation.html" class="service-link">Learn More →</a>
+        <span class="service-link">Learn More →</span>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
