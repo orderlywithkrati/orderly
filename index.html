@@ -35,7 +35,7 @@
     "url": "https://orderlywithkrati.com/",
     "telephone": "+91-74830-00805",
     "email": "orderlywithkrati@gmail.com",
-    "description": "Professional home and office organising services across India — closet organisation, kitchen makeovers, house move setup, decluttering, and online consultations.",
+    "description": "Professional home and office organising services across India — closet organisation, kitchen makeovers, new home setup, decluttering, and online consultations.",
     "areaServed": { "@type": "Country", "name": "India" },
     "sameAs": [
       "https://www.instagram.com/orderlywithkrati/",
@@ -60,7 +60,7 @@
       {
         "@type": "Review",
         "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "author": { "@type": "Person", "name": "Sai Keerthana" },
+        "author": { "@type": "Person", "name": "Sai Keerthana", "jobTitle": "Lead Product Designer, DocuSign India" },
         "reviewBody": "I cannot recommend Krati enough. She quite literally single-handedly transformed my entire apartment from chaos to a home."
       },
       {
@@ -247,6 +247,7 @@
     .testimonial-footer { display: flex; align-items: center; gap: 1rem; }
     .testimonial-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: center top; }
     .testimonial-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--black); }
+    .testimonial-role { display: block; font-size: 0.8rem; color: #666; line-height: 1.4; margin-top: 0.1rem; }
 
     /* ── Contact ── */
     .contact-section { padding: 80px 0; background: var(--white); }
@@ -371,7 +372,7 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">Professional Home &amp; Office Organising, Pan India</h1>
+    <h1 class="hero-title">Professional Home &amp; Office Organising</h1>
     <p class="hero-subtitle">Declutter, organise, and create calm spaces that work for your life.</p>
   </div>
   <div class="hero-arrows">
@@ -405,10 +406,10 @@
     <h2 class="section-title reveal">Services</h2>
   </div>
   <div class="services-grid container">
-    <a href="house-move-setup.html" class="service-card reveal reveal-delay-1">
-      <img src="images/closet/closet-8.jpg" alt="House Move & Setup" loading="lazy" decoding="async" />
+    <a href="new-home-setup.html" class="service-card reveal reveal-delay-1">
+      <img src="images/closet/closet-8.jpg" alt="New Home Setup" loading="lazy" decoding="async" />
       <div class="service-body">
-        <h3 class="service-name">House Move &amp; Setup</h3>
+        <h3 class="service-name">New Home Setup</h3>
         <p class="service-desc">Start your new chapter with a beautifully organised home from day one.</p>
         <span class="service-link">Learn More →</span>
       </div>
@@ -511,7 +512,8 @@
     <div class="gallery-filters reveal">
       <button class="filter-btn active" data-filter="closet">Wardrobe</button>
       <button class="filter-btn" data-filter="kitchen">Kitchen</button>
-      <button class="filter-btn" data-filter="vanity">Storage Spaces</button>
+      <button class="filter-btn" data-filter="kids">Kids&rsquo; Spaces</button>
+      <button class="filter-btn" data-filter="commercial">Commercial Spaces</button>
     </div>
   </div>
   <div class="gallery-grid" id="gallery-grid">
@@ -534,16 +536,18 @@
     <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-6.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
     <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-7.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
     <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-8.jpg" alt="Kitchen makeover" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <!-- Vanity -->
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-1.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-2.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-3.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-4.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-5.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-6.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-7.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-8.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
-    <div class="gallery-item" data-cat="vanity"><img src="images/vanity/vanity-9.jpg"   alt="Storage space organisation" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen/kitchen-9.jpg" alt="Pantry shelves with labelled white bins for staples and snacks" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <!-- Kids' Spaces -->
+    <div class="gallery-item" data-cat="kids"><img src="images/hero/hero-kids-shelf.jpg" alt="Labelled kids' games, books and art supplies on shelves" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kids"><img src="images/vanity/vanity-2.jpg" alt="Kids' toy and book storage with labelled bins" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kids"><img src="images/vanity/vanity-3.jpg" alt="Kids' books and toys organised in bins by a window" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kids"><img src="images/vanity/vanity-8.jpg" alt="Organised kids' play area with toy storage and book shelves" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="kids"><img src="images/vanity/vanity-10.jpg" alt="Kids' bookshelf with book series, puzzles and a labelled card games box" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <!-- Commercial Spaces -->
+    <div class="gallery-item" data-cat="commercial"><img src="images/vanity/vanity-5.jpg" alt="Organised stationery and craft supplies in a school cupboard" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <div class="gallery-item" data-cat="commercial"><img src="images/vanity/vanity-6.jpg" alt="Labelled storage bins for school events and activity supplies" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
+    <!-- Shoe storage (Wardrobe) -->
+    <div class="gallery-item" data-cat="closet"><img src="images/vanity/vanity-7.jpg" alt="Pull-out rotating shoe rack in a wardrobe" loading="lazy" decoding="async"/><div class="gallery-overlay"><span>+</span></div></div>
   </div>
 </section>
 
@@ -576,7 +580,10 @@
         <p class="testimonial-text">I cannot recommend Krati enough. She quite literally single-handedly transformed my entire apartment from chaos to a home. She was so kind, patient, and diligent! Very knowledgeable and knows how to get things done efficiently. I'm so grateful for having made a new friend and also for everything she did to create a beautiful home for me.</p>
         <div class="testimonial-footer">
           <img src="images/testimonial/sai-keerthana.jpg" alt="Sai Keerthana" class="testimonial-avatar" loading="lazy" decoding="async" />
-          <span class="testimonial-name">Sai Keerthana</span>
+          <div>
+            <span class="testimonial-name">Sai Keerthana</span>
+            <span class="testimonial-role">Lead Product Designer, DocuSign India</span>
+          </div>
         </div>
       </div>
       <div class="testimonial-card reveal reveal-delay-3">
@@ -666,7 +673,7 @@
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="house-move-setup.html">House Move &amp; Setup</a></li>
+        <li><a href="new-home-setup.html">New Home Setup</a></li>
         <li><a href="closet-organisation.html">Closet Organisation</a></li>
         <li><a href="kitchen-makeover.html">Kitchen Makeover</a></li>
         <li><a href="office-decluttering.html">Office Decluttering</a></li>

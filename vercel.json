@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/house-move-setup.html", "destination": "/new-home-setup.html", "permanent": true }
+  ]
+}
